@@ -17,7 +17,7 @@ export class AppComponent {
 
 
   public addTodoAction() {
-    console.log("addTodoAction function from component");
+    console.log('addTodoAction function from component');
     this.store.dispatch(new fromTodoActions.AddTodoAction('whatever'));
   }
 }

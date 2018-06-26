@@ -46,9 +46,6 @@ export const initialState: TodosState = {
 export function reducer(state: TodosState = initialState, action: Action): TodosState {
     switch (action.type) {
         case fromTodoActions.ADD_TODO:
-            console.log('ADD_TODO action dispatched');
-            console.dir(action);
-            console.log(action.payload);
             return {
                 ...state,
             };
