@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
+
+import * as fromRootReducer from './reducers/app.reducer';
+import * as fromTodoActions from './actions/todo.actions';
+
 
 @Component({
   selector: 'app-root',
@@ -6,5 +11,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  constructor(
+    private store: Store<fromRootReducer.WholeState>
+  ) {}
+
+
+  public addTodoAction() {
+    console.log("addTodoAction function from component");
+    this.store.dispatch(new fromTodoActions.AddTodoAction('whatever'));
+  }
 }
