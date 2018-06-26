@@ -1,0 +1,35 @@
+<h2>Task Editor</h2>
+<form [formGroup]="editForm" (ngSubmit)="submit()">
+  <div class="container">
+    <div class="form_group">
+      <label for="name">Task <small>e.g. Buy Groceries</small></label>
+      <input type="text" id="task" formControlName="task">
+    </div>
+
+    <div class="horiz">
+      <div class="form_group">
+        <label>Date <small>e.g. 2017/10/20</small></label>
+        <div class="date">
+          <input type="text" id="year" placeholder="YYYY" maxlength="4" formControlName="year">
+          <span>/</span>
+          <input type="text" id="month" placeholder="MM" maxlength="2" formControlName="month">
+          <span>/</span>
+          <input type="text" id="day" placeholder="DD" maxlength="2" formControlName="day">
+        </div>
+      </div>
+
+      <div class="form_group">
+        <label>Time <small>e.g. 18:45</small></label>
+        <div class="time">
+          <input type="text" id="hour" placeholder="HH" formControlName="hour">
+          <span>:</span>
+          <input type="text" id="min" placeholder="MM" formControlName="min">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <a routerLink="/" class="button">Cancel</a>
+    <button type="submit" class="button">Save Task</button>
+  </div>
+</form>
