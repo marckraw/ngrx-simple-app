@@ -11,7 +11,7 @@ export function randomUserReducer(state: any = initialState, action: Action): an
     switch (action.type) {
         case fromtRandomUserActions.GET_DATA_SUCCESS:
             return {
-                data: action.payload.results[0],
+                ...action.payload.results[0],
             };
 
         default:

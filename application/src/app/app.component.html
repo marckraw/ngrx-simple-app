@@ -3,5 +3,5 @@
 
 
 <div *ngIf="(someData$ | async) as someData" style="margin-top: 40px; font-size: 48px;">
-    {{ someData.data.name?.title }}. {{ someData.data.name?.first }} {{ someData.data.name?.last }}
+    {{ someData.name?.title }}. {{ someData.name?.first }} {{ someData.name?.last }}
 </div>
