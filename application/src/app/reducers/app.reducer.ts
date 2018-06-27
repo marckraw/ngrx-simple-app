@@ -10,7 +10,6 @@ export interface WholeState {
 }
 
 const reducers = {
-    // router: fromRouter.routerReducer,
     todos: fromTodos.reducer,
 };
 

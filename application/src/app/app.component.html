@@ -1,2 +1,7 @@
 <h1>NGRX simple app</h1>
-<button (click)="addTodoAction()">Dispatch add todo action</button>
+<button (click)="addTodoAction()">Get Random User</button>
+
+
+<div *ngIf="(someData$ | async) as someData" style="margin-top: 40px; font-size: 48px;">
+    {{ someData.data.name?.title }}. {{ someData.data.name?.first }} {{ someData.data.name?.last }}
+</div>
