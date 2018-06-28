@@ -1,7 +1,10 @@
-import { Action } from '@ngrx/store';
-
+// import { Action } from '@ngrx/store';
 import * as fromtRandomUserActions from '../actions/randomUser.actions';
 
+interface Action {
+    type: string;
+    payload: any;
+}
 
 export const initialState: any = {
     data: [],
